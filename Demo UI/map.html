@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Locate Wifi Station</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta style="text-align: center">
+  <meta name="description" content="Calculate the convex hull of a set of points." />
+  <meta name="keywords" content="ol3, geom, polygon, convex hull, envelope" />
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+  <!-- Openlayers -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL,Object.assign"></script>
+
+  <!-- ol-ext -->
+  <link rel="stylesheet" href="dist/ol-ext.css" />
+  <script type="text/javascript" src="dist/ol-ext.js"></script>
+  <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+  <script src="https://unpkg.com/elm-pep"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map{
+      position: absolute;
+      top:0;
+      bottom:0;
+      width:100%
+    }
+
+    .ol-overlay.menu {
+
+      width: 25%;
+      background: white;
+      color: #333;
+      box-shadow: 0px 0px 3px #666666;
+      padding: 0.5em;
+      -webkit-transition: all 0.25s;
+      transition: all 0.25s;
+      font-family: "Segoe UI", "sans-serif";
+      opacity: 80%;
+      align-content: center;
+    }
+    /* style the close box */
+    .ol-overlay.menu .ol-closebox {
+      left: 1em;
+      top: 0.5em;
+    }
+    .ol-overlay.menu .ol-closebox:before {
+      content:"\f0c9";
+      font-family: "JetBrains Mono Medium",sans-serif;
+    }
+    #menu {
+      padding-top: 1.5em;
+      font-size: 1em;
+    }
+    /* menu button */
+    .ol-control.menu {
+      top: 0.5em;
+      left: 0.5em;
+    }
+    .ol-zoom {
+      left: auto;
+      right: 0.5em;
+    }
+    .ol-rotate {
+      right: 3em;
+    }
+    .ol-touch .ol-rotate {
+      right: 3.5em;
+    }
+    /**/
+    .ol-overlay img {
+      max-width: 90%;
+    }
+    .data,
+    .data p {
+      margin:0;
+      text-align: center;
+      font-size:0.9em;
+    }
+
+    .logo {
+      width: 200px;
+      cursor: pointer;
+      vertical-align: center;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border: 0;
+      outline: 1px;
+      border-radius: 8px;
+      background: #99ccff;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      vertical-align: center;
+
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body >
+  <a href="https://github.com/Viglino/ol-ext" class="icss-github-corner"><i></i></a>
+
+
+  <h1 style = "text-align: center; font-size: 100px">Locate Wi-Fi Station</h1>
+  <div class="info" style="text-align: center">
+    <> Using the centroid of convex hull to find the location of Wifi Station <p>
+  </div>
+
+  <!-- Map div -->
+  <div id="map"></div>
+  <script src = "Map.js">
+  </script>
+
+
+  <div id="menu">
+    <h1 style="text-align: center; color: #337ab7; font-size: 40px">Wi-fi Location</h1>
+    <img align="middle" src = "wifi.png" class = "logo">
+    <p style = "font-size: medium">
+      Áp dụng thuật toán Melkman trên GPU trong bài toán tìm bao lồi để xác định vị trí đặt trạm phát Wifi với tập điểm cho trước
+    </p>
+    <div class="options">
+    Chọn các điểm trên bản đồ để tính convex hull
+        <button class="button" onclick="vector.getSource().clear();">Import data</button>
+        <button class="button" onclick="vector.getSource().clear();">Clear!</button>
+    </div>
+
+    <br>
+
+    <div style="font-size: 20px; font-weight: bolder; color: #337ab7">
+      Tọa độ đặt trạm phát Wi-fi
+      <div style="text-align: center; font-size: 80px">
+        <button class = "btn">105.805313,21.038491</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script type = "text/javascript">
+    var menu = new ol.control.Overlay ({
+      closeBox : true,
+      className: "slide-left menu",
+      content: $("#menu").get(0)
+    });
+    map.addControl(menu);
+
+    // A toggle control to show/hide the menu
+    var t = new ol.control.Toggle({
+      html: '<i class="fa fa-smile-o" ></i>',
+      className: "menu",
+      title: "Wi-fi Location",
+      onToggle: function() { menu.toggle(); }
+    });
+    map.addControl(t);
+
+  </script>
+
+
+  <script src = "Centroid.js">
+    //centroid
+  </script>
+
+</body>
+</html>
