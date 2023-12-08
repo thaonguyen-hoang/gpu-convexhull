@@ -21,7 +21,6 @@
 - Paste your API Keys on file [Map.js](Map.js)
 `const key = 'YOUR MAPTILER API KEY ...';`
 
-
 ### Start the website by:
 ### `npm start`
 
