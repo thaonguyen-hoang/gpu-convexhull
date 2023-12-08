@@ -18,7 +18,7 @@
 ## Run
 ### Set up Map
 - Create an account on the Maptiler website
-- Paste your API Keys on file [Map.js](Demo UI/Map.js)
+- Paste your API Keys on file [Map.js](Map.js)
 `const key = 'YOUR MAPTILER API KEY ...';`
 
 
