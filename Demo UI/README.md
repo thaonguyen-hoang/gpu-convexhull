@@ -9,9 +9,9 @@
 - [MapTiler](https://www.maptiler.com/) : A mapping platform designed for developers. Publish interactive maps in your web applications and on mobile devices.
 
 ## Installation
-#### Download and install NodeJS
+ Download and install NodeJS
 
-#### In the project directory, open the Terminal and install the required packages by :
+- In the project directory, open the Terminal and install the required packages by :
 ### `npm install`
 
 
