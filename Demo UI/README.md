@@ -9,14 +9,20 @@
 - [MapTiler](https://www.maptiler.com/) : A mapping platform designed for developers. Publish interactive maps in your web applications and on mobile devices.
 
 ## Installation
- Download and install NodeJS
+- Download and install NodeJS
 
 - In the project directory, open the Terminal and install the required packages by :
 ### `npm install`
 
 
 ## Run
-Start the website by:
+### Set up Map
+- Create an account on the Maptiler website
+- Paste your API Keys on file [Map.js](Demo UI/Map.js)
+`const key = 'YOUR MAPTILER API KEY ...';`
+
+
+### Start the website by:
 ### `npm start`
 
 
