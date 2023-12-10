@@ -25,4 +25,27 @@ Trong thư mục front_end, sử dụng Terminal để cài đặt các modules 
 
  # Usage Guide
  ## Giao diện chính
- ![](DemoUI/img/main.png)
+![main](https://github.com/duongthanhhaii/Nhom6_ConvexHull/assets/109170970/d4656f69-4a69-4873-8f6c-62945e3e7e4f)
+
+## Chức năng chính
+Chọn các điểm trên bản đồ làm tập input đầu vào bằng cách click trực tiếp trên biểu đồ
+![point](https://github.com/duongthanhhaii/Nhom6_ConvexHull/assets/109170970/36c14b80-431f-402f-8060-999f060554f3)
+Sau khi hoàn tất, bấm vào “Confirm”. Lúc này web trả về:
+- Các đỉnh của convex hull : màu tím
+- Tâm của convex hull, hay nơi đặt trạm phát wi-fi : màu đỏ
+- ![hull](https://github.com/duongthanhhaii/Nhom6_ConvexHull/assets/109170970/64a16f03-df12-4fd5-a451-ffcea2fa75b4)
+
+## Các chức năng khác
+- Search địa điểm
+![search](https://github.com/duongthanhhaii/Nhom6_ConvexHull/assets/109170970/f0d209c4-6a2d-4fd5-88c9-40e43649e91c)
+- Thao tác với bản đồ
+![other](https://github.com/duongthanhhaii/Nhom6_ConvexHull/assets/109170970/97331c33-7fa7-49ff-b0b0-ca24a975d357)
+
+
+
+
+
+
+
+
+
