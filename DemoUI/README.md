@@ -17,7 +17,7 @@ Trong thư mục front_end, sử dụng Terminal để cài đặt các modules 
 ## Run
 #### Set up map
 - Truy cập vào trang web [Mapbox](https://www.mapbox.com/), tạo tài khoản, đăng nhập để lấy API Access Token
-- Sau đó, vào file 'Map.js', thay token:
+- Sau đó, vào file 'App.js', thay token:
 `const MAPBOX_API_KEY = "[your_token]"`
  #### Start the website
  Trong thư mục front_end, mở Terminal và chạy dòng lệnh :
