@@ -1,4 +1,4 @@
-# Installation Guide For ”Wi-fi Location” Website
+# Installation Guide
 
 ## Installation
 #### NodeJS
@@ -22,3 +22,7 @@ Trong thư mục front_end, sử dụng Terminal để cài đặt các modules 
  #### Start the website
  Trong thư mục front_end, mở Terminal và chạy dòng lệnh :
  `npm start`
+
+ # Usage Guide
+ ## Giao diện chính
+ [](img/main)
