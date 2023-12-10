@@ -25,4 +25,4 @@ Trong thư mục front_end, sử dụng Terminal để cài đặt các modules 
 
  # Usage Guide
  ## Giao diện chính
- [](/img/main.png)
+ (/img/main.png)
