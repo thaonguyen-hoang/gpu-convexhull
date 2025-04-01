@@ -7,7 +7,7 @@ This is our **group project** in **Course MAT3148 - Parallel Computing**
 - topics covered: GPU, thread/warp scheduling
 - tech stack: **CuPy (Cuda + Python), ReactJS**
 - results:
-    + implemented a **Python version** of the **GPU-utilized algorithm** in reference to the original with C++ programming
+    + implemented a **Python version** of the **GPU-utilized algorithm** with reference to the original with C++ programming
     + experimented with dataset of different sizes varying **from 100K to 20M** data points, reaching a significant **speedup of 4 times** at best in terms of excution time
 
 ---
